@@ -1,0 +1,8 @@
+{
+  "name": "typescript",
+  "version": "1.0.0",
+  "license": "MIT",
+  "scripts": {
+    "build": "parcel build --dist-dir build src/index.ts"
+  }
+}

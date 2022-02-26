@@ -1,0 +1,8 @@
+{
+  "name": "import-and-export",
+  "version": "1.0.0",
+  "license": "MIT",
+  "scripts": {
+    "build": "parcel build --no-optimize --dist-dir build src/index.js"
+  }
+}
