@@ -2,6 +2,8 @@
 
 This is an example of what a React app looks like once it's been transpiled and bundled.
 
+To illustrate different ways of transpiling and bundling code, there are two builds - one with Parcel and one with the TypeScript compiler.
+
 ## The `tsc` build
 This is the output from the TypeScript compiler, in `build-tsc`. It includes transpiling JSX and compiling Typescript.
 
