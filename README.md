@@ -14,3 +14,5 @@ It may help to explain the following:
 
 ## Getting started
 Navigate to each subdirectory in the monorepo, check out the README, and have a poke around.
+
+Remember to run `yarn install` in the monorepo root if you are going to run any scripts.
