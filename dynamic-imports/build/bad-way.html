@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Literature</title>
+    <script type="module">const $368d9f64f06ed2b0$var$setTranslation = async (lang)=>{
+    const properties = await import(`./translations/${lang}.json`);
+    for (const [id, value] of Object.entries(properties))document.getElementById(id).innerText = value;
+};
+window.addEventListener("DOMContentLoaded", ()=>{
+    $368d9f64f06ed2b0$var$setTranslation("en");
+    document.getElementById("language-select").addEventListener("change", (e)=>$368d9f64f06ed2b0$var$setTranslation(e.target.value)
+    );
+});
+
+
+</script>
+  </head>
+  <body>
+    <p>This is a broken way to create dynamic imports.</p>
+    <p>
+      Because the <code>import()</code> call contains a string interpolation,
+      Parcel couldn't discover the JSON files statically, so it didn't bundle
+      any of them.
+    </p>
+    <p>
+      This means that the JS code throws a runtime error when it can't find the
+      relevant JSON module.
+    </p>
+    <p><a href="/good-way.html">How to fix it</a></p>
+    <label for="language-select">Language</label>
+    <select id="language-select">
+      <option selected="" value="en">english</option>
+      <option value="es">español</option>
+      <option value="is">íslensk</option>
+      <option value="ru">русский</option>
+    </select>
+    <h1 id="title"></h1>
+    <div id="extract">Loading...</div>
+  </body>
+</html>

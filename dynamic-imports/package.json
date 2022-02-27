@@ -1,0 +1,12 @@
+{
+  "name": "dynamic-imports",
+  "version": "1.0.0",
+  "license": "MIT",
+  "scripts": {
+    "build": "parcel build --no-optimize --dist-dir build src/*.html",
+    "serve": "serve build -l 3000"
+  },
+  "devDependencies": {
+    "serve": "^13.0.2"
+  }
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Literature</title>
+    <script type="module">
+      const TRANSLATIONS = {
+        en: () => import("./translations/en.json"),
+        es: () => import("./translations/es.json"),
+        is: () => import("./translations/is.json"),
+        ru: () => import("./translations/ru.json"),
+      };
+      const setTranslation = async (lang) => {
+        const doImport = TRANSLATIONS[lang];
+        if (!doImport) {
+          throw new Error(`Invalid translation selected: ${lang}`);
+        }
+        const translation = await doImport();
+
+        for (const [id, value] of Object.entries(translation)) {
+          document.getElementById(id).innerText = value;
+        }
+      };
+
+      window.addEventListener("DOMContentLoaded", () => {
+        setTranslation("en");
+        document
+          .getElementById("language-select")
+          .addEventListener("change", (e) => setTranslation(e.target.value));
+      });
+    </script>
+  </head>
+  <body>
+    <p>
+      This implementation fixes the runtime error in the
+      <a href="./bad-way.html">broken example</a>.
+    </p>
+    <p>We have statically declared all possible imports up-front, so Parcel can find them and bundle them. Check the build folder to see how this looks.</p>
+    <p>
+      There may be other ways to solve this with less duplication. But sometimes
+      I would rather have repetitive code than hidden magic that only I
+      understand, and this is one of those times.
+    </p>
+    <select id="language-select">
+      <option selected value="en">english</option>
+      <option value="es">español</option>
+      <option value="is">íslensk</option>
+      <option value="ru">русский</option>
+    </select>
+    <h1 id="title"></h1>
+    <div id="extract">Loading...</div>
+  </body>
+</html>

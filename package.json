@@ -12,6 +12,7 @@
     "react-app",
     "images",
     "typescript",
-    "import-and-export"
+    "import-and-export",
+    "dynamic-imports"
   ]
 }
