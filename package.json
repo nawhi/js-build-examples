@@ -8,11 +8,9 @@
   },
   "private": true,
   "workspaces": [
-    "html-js-css",
     "react-app",
-    "images",
     "typescript",
-    "import-and-export",
+    "imports",
     "dynamic-imports"
   ]
 }
