@@ -11,3 +11,6 @@ It may help to explain the following:
 - how do build tools convert imports & exports / library calls into a single file?
 - why does the script filename have a random UUID on it?
 - and more...
+
+## Getting started
+Navigate to each subdirectory in the monorepo, check out the README, and have a poke around.
